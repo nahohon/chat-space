@@ -5,7 +5,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|index: true, null: false, unique: true|
-|email|string|null: false|unique: true|
 
 ### Association
 
@@ -33,12 +32,12 @@
 ## groups table
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true, null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 
    - has_many :messages
-   - has_many :users, through: :groups_users <br>
+   - has_many :users, through: :groups_users
    - has_many :groups_users
    
    
